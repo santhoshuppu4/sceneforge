@@ -1,0 +1,162 @@
+version: "3.9"
+
+# ═══════════════════════════════════════════════
+# SceneForge Local Development Stack
+#
+# Usage:
+#   docker compose -f docker/docker-compose.yml up --build
+#   docker compose -f docker/docker-compose.yml down -v
+#
+# Services:
+#   api        FastAPI inference server   :8000
+#   streamlit  Demo UI                    :8501
+#   redis      Hot-path cache             :6379
+#   postgres   Inference + feedback log   :5432
+#   prometheus Metrics scraper            :9090
+#   grafana    Dashboard                  :3000
+#   mlflow     Experiment tracking        :5001
+# ═══════════════════════════════════════════════
+
+networks:
+  sceneforge_net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  prometheus_data:
+  grafana_data:
+  mlflow_data:
+  model_checkpoints:
+
+services:
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: sceneforge-api:latest
+    container_name: sceneforge_api
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_PATH: /checkpoints/best.pt
+      NUM_CLASSES: 40
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: sceneforge
+      DB_USER: sceneforge
+      DB_PASSWORD: sceneforge_dev
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    volumes:
+      - model_checkpoints:/checkpoints:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
+
+  streamlit:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.streamlit
+    container_name: sceneforge_ui
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: sceneforge_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: sceneforge_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: sceneforge
+      POSTGRES_USER: sceneforge
+      POSTGRES_PASSWORD: sceneforge_dev
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sceneforge"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.48.0
+    container_name: sceneforge_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.retention.time=15d"
+      - "--web.enable-lifecycle"
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: sceneforge_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
+
+  mlflow:
+    image: python:3.11-slim
+    container_name: sceneforge_mlflow
+    ports:
+      - "5001:5001"
+    volumes:
+      - mlflow_data:/mlflow
+    command: >
+      bash -c "pip install mlflow -q &&
+               mlflow server
+               --host 0.0.0.0
+               --port 5001
+               --backend-store-uri /mlflow
+               --default-artifact-root /mlflow/artifacts"
+    networks:
+      - sceneforge_net
+    restart: unless-stopped
