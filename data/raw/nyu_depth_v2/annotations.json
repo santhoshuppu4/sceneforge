@@ -1,0 +1,1192 @@
+{
+  "train": [
+    {
+      "id": 0,
+      "rgb_path": "rgb_00000.png",
+      "depth_path": "depth_00000.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 23,
+          "visible_box": [
+            530,
+            315,
+            83,
+            72
+          ],
+          "amodal_box": [
+            525,
+            310,
+            93,
+            82
+          ],
+          "occlusion": 0.59
+        },
+        {
+          "label": 33,
+          "visible_box": [
+            316,
+            289,
+            85,
+            109
+          ],
+          "amodal_box": [
+            311,
+            284,
+            95,
+            119
+          ],
+          "occlusion": 0.58
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rgb_path": "rgb_00001.png",
+      "depth_path": "depth_00001.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 35,
+          "visible_box": [
+            52,
+            161,
+            103,
+            60
+          ],
+          "amodal_box": [
+            47,
+            156,
+            113,
+            70
+          ],
+          "occlusion": 0.01
+        },
+        {
+          "label": 39,
+          "visible_box": [
+            154,
+            210,
+            81,
+            85
+          ],
+          "amodal_box": [
+            149,
+            205,
+            91,
+            95
+          ],
+          "occlusion": 0.03
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "rgb_path": "rgb_00002.png",
+      "depth_path": "depth_00002.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 15,
+          "visible_box": [
+            144,
+            111,
+            52,
+            66
+          ],
+          "amodal_box": [
+            139,
+            106,
+            62,
+            76
+          ],
+          "occlusion": 0.11
+        },
+        {
+          "label": 31,
+          "visible_box": [
+            340,
+            84,
+            85,
+            103
+          ],
+          "amodal_box": [
+            335,
+            79,
+            95,
+            113
+          ],
+          "occlusion": 0.02
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "rgb_path": "rgb_00003.png",
+      "depth_path": "depth_00003.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 0,
+          "visible_box": [
+            212,
+            266,
+            69,
+            113
+          ],
+          "amodal_box": [
+            207,
+            261,
+            79,
+            123
+          ],
+          "occlusion": 0.59
+        },
+        {
+          "label": 35,
+          "visible_box": [
+            278,
+            167,
+            119,
+            102
+          ],
+          "amodal_box": [
+            273,
+            162,
+            129,
+            112
+          ],
+          "occlusion": 0.41
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "rgb_path": "rgb_00004.png",
+      "depth_path": "depth_00004.npy",
+      "scene_type": "bedroom",
+      "objects": [
+        {
+          "label": 38,
+          "visible_box": [
+            146,
+            102,
+            42,
+            44
+          ],
+          "amodal_box": [
+            141,
+            97,
+            52,
+            54
+          ],
+          "occlusion": 0.09
+        },
+        {
+          "label": 19,
+          "visible_box": [
+            91,
+            43,
+            44,
+            73
+          ],
+          "amodal_box": [
+            86,
+            38,
+            54,
+            83
+          ],
+          "occlusion": 0.05
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "rgb_path": "rgb_00005.png",
+      "depth_path": "depth_00005.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 39,
+          "visible_box": [
+            7,
+            205,
+            119,
+            48
+          ],
+          "amodal_box": [
+            2,
+            200,
+            129,
+            58
+          ],
+          "occlusion": 0.02
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "rgb_path": "rgb_00006.png",
+      "depth_path": "depth_00006.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 23,
+          "visible_box": [
+            160,
+            64,
+            62,
+            117
+          ],
+          "amodal_box": [
+            155,
+            59,
+            72,
+            127
+          ],
+          "occlusion": 0.44
+        },
+        {
+          "label": 11,
+          "visible_box": [
+            502,
+            134,
+            83,
+            101
+          ],
+          "amodal_box": [
+            497,
+            129,
+            93,
+            111
+          ],
+          "occlusion": 0.41
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "rgb_path": "rgb_00007.png",
+      "depth_path": "depth_00007.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 33,
+          "visible_box": [
+            137,
+            313,
+            73,
+            99
+          ],
+          "amodal_box": [
+            132,
+            308,
+            83,
+            109
+          ],
+          "occlusion": 0.14
+        },
+        {
+          "label": 7,
+          "visible_box": [
+            78,
+            96,
+            48,
+            103
+          ],
+          "amodal_box": [
+            73,
+            91,
+            58,
+            113
+          ],
+          "occlusion": 0.69
+        },
+        {
+          "label": 36,
+          "visible_box": [
+            417,
+            186,
+            103,
+            95
+          ],
+          "amodal_box": [
+            412,
+            181,
+            113,
+            105
+          ],
+          "occlusion": 0.32
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "rgb_path": "rgb_00008.png",
+      "depth_path": "depth_00008.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 37,
+          "visible_box": [
+            85,
+            116,
+            65,
+            84
+          ],
+          "amodal_box": [
+            80,
+            111,
+            75,
+            94
+          ],
+          "occlusion": 0.04
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "rgb_path": "rgb_00009.png",
+      "depth_path": "depth_00009.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 5,
+          "visible_box": [
+            407,
+            63,
+            63,
+            120
+          ],
+          "amodal_box": [
+            402,
+            58,
+            73,
+            130
+          ],
+          "occlusion": 0.54
+        },
+        {
+          "label": 1,
+          "visible_box": [
+            511,
+            109,
+            67,
+            98
+          ],
+          "amodal_box": [
+            506,
+            104,
+            77,
+            108
+          ],
+          "occlusion": 0.17
+        },
+        {
+          "label": 9,
+          "visible_box": [
+            61,
+            36,
+            99,
+            65
+          ],
+          "amodal_box": [
+            56,
+            31,
+            109,
+            75
+          ],
+          "occlusion": 0.27
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "rgb_path": "rgb_00010.png",
+      "depth_path": "depth_00010.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 11,
+          "visible_box": [
+            132,
+            344,
+            66,
+            54
+          ],
+          "amodal_box": [
+            127,
+            339,
+            76,
+            64
+          ],
+          "occlusion": 0.79
+        },
+        {
+          "label": 15,
+          "visible_box": [
+            30,
+            362,
+            65,
+            66
+          ],
+          "amodal_box": [
+            25,
+            357,
+            75,
+            76
+          ],
+          "occlusion": 0.14
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "rgb_path": "rgb_00011.png",
+      "depth_path": "depth_00011.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 4,
+          "visible_box": [
+            44,
+            77,
+            108,
+            113
+          ],
+          "amodal_box": [
+            39,
+            72,
+            118,
+            123
+          ],
+          "occlusion": 0.01
+        },
+        {
+          "label": 13,
+          "visible_box": [
+            255,
+            147,
+            98,
+            95
+          ],
+          "amodal_box": [
+            250,
+            142,
+            108,
+            105
+          ],
+          "occlusion": 0.04
+        },
+        {
+          "label": 9,
+          "visible_box": [
+            102,
+            282,
+            50,
+            87
+          ],
+          "amodal_box": [
+            97,
+            277,
+            60,
+            97
+          ],
+          "occlusion": 0.02
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "rgb_path": "rgb_00012.png",
+      "depth_path": "depth_00012.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 9,
+          "visible_box": [
+            405,
+            92,
+            82,
+            67
+          ],
+          "amodal_box": [
+            400,
+            87,
+            92,
+            77
+          ],
+          "occlusion": 0.4
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "rgb_path": "rgb_00013.png",
+      "depth_path": "depth_00013.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 28,
+          "visible_box": [
+            85,
+            4,
+            96,
+            48
+          ],
+          "amodal_box": [
+            80,
+            0,
+            106,
+            58
+          ],
+          "occlusion": 0.7
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "rgb_path": "rgb_00014.png",
+      "depth_path": "depth_00014.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 31,
+          "visible_box": [
+            430,
+            155,
+            71,
+            119
+          ],
+          "amodal_box": [
+            425,
+            150,
+            81,
+            129
+          ],
+          "occlusion": 0.74
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "rgb_path": "rgb_00015.png",
+      "depth_path": "depth_00015.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 7,
+          "visible_box": [
+            222,
+            248,
+            90,
+            72
+          ],
+          "amodal_box": [
+            217,
+            243,
+            100,
+            82
+          ],
+          "occlusion": 0.63
+        },
+        {
+          "label": 30,
+          "visible_box": [
+            526,
+            116,
+            69,
+            63
+          ],
+          "amodal_box": [
+            521,
+            111,
+            79,
+            73
+          ],
+          "occlusion": 0.63
+        },
+        {
+          "label": 15,
+          "visible_box": [
+            34,
+            242,
+            67,
+            115
+          ],
+          "amodal_box": [
+            29,
+            237,
+            77,
+            125
+          ],
+          "occlusion": 0.6
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "rgb_path": "rgb_00016.png",
+      "depth_path": "depth_00016.npy",
+      "scene_type": "bedroom",
+      "objects": [
+        {
+          "label": 10,
+          "visible_box": [
+            329,
+            42,
+            83,
+            72
+          ],
+          "amodal_box": [
+            324,
+            37,
+            93,
+            82
+          ],
+          "occlusion": 0.25
+        },
+        {
+          "label": 32,
+          "visible_box": [
+            188,
+            336,
+            103,
+            92
+          ],
+          "amodal_box": [
+            183,
+            331,
+            113,
+            102
+          ],
+          "occlusion": 0.35
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "rgb_path": "rgb_00017.png",
+      "depth_path": "depth_00017.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 24,
+          "visible_box": [
+            237,
+            158,
+            94,
+            58
+          ],
+          "amodal_box": [
+            232,
+            153,
+            104,
+            68
+          ],
+          "occlusion": 0.18
+        },
+        {
+          "label": 36,
+          "visible_box": [
+            244,
+            61,
+            69,
+            96
+          ],
+          "amodal_box": [
+            239,
+            56,
+            79,
+            106
+          ],
+          "occlusion": 0.36
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "rgb_path": "rgb_00018.png",
+      "depth_path": "depth_00018.npy",
+      "scene_type": "bedroom",
+      "objects": [
+        {
+          "label": 20,
+          "visible_box": [
+            412,
+            23,
+            101,
+            107
+          ],
+          "amodal_box": [
+            407,
+            18,
+            111,
+            117
+          ],
+          "occlusion": 0.1
+        },
+        {
+          "label": 30,
+          "visible_box": [
+            540,
+            25,
+            52,
+            59
+          ],
+          "amodal_box": [
+            535,
+            20,
+            62,
+            69
+          ],
+          "occlusion": 0.46
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "rgb_path": "rgb_00019.png",
+      "depth_path": "depth_00019.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 35,
+          "visible_box": [
+            251,
+            126,
+            41,
+            68
+          ],
+          "amodal_box": [
+            246,
+            121,
+            51,
+            78
+          ],
+          "occlusion": 0.15
+        },
+        {
+          "label": 6,
+          "visible_box": [
+            203,
+            193,
+            69,
+            51
+          ],
+          "amodal_box": [
+            198,
+            188,
+            79,
+            61
+          ],
+          "occlusion": 0.35
+        }
+      ]
+    }
+  ],
+  "val": [
+    {
+      "id": 20,
+      "rgb_path": "rgb_00020.png",
+      "depth_path": "depth_00020.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 17,
+          "visible_box": [
+            228,
+            301,
+            60,
+            78
+          ],
+          "amodal_box": [
+            223,
+            296,
+            70,
+            88
+          ],
+          "occlusion": 0.51
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "rgb_path": "rgb_00021.png",
+      "depth_path": "depth_00021.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 26,
+          "visible_box": [
+            377,
+            156,
+            75,
+            114
+          ],
+          "amodal_box": [
+            372,
+            151,
+            85,
+            124
+          ],
+          "occlusion": 0.55
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "rgb_path": "rgb_00022.png",
+      "depth_path": "depth_00022.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 34,
+          "visible_box": [
+            223,
+            57,
+            56,
+            115
+          ],
+          "amodal_box": [
+            218,
+            52,
+            66,
+            125
+          ],
+          "occlusion": 0.35
+        },
+        {
+          "label": 13,
+          "visible_box": [
+            51,
+            346,
+            89,
+            58
+          ],
+          "amodal_box": [
+            46,
+            341,
+            99,
+            68
+          ],
+          "occlusion": 0.31
+        },
+        {
+          "label": 33,
+          "visible_box": [
+            293,
+            50,
+            64,
+            111
+          ],
+          "amodal_box": [
+            288,
+            45,
+            74,
+            121
+          ],
+          "occlusion": 0.2
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "rgb_path": "rgb_00023.png",
+      "depth_path": "depth_00023.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 24,
+          "visible_box": [
+            100,
+            305,
+            70,
+            68
+          ],
+          "amodal_box": [
+            95,
+            300,
+            80,
+            78
+          ],
+          "occlusion": 0.18
+        },
+        {
+          "label": 6,
+          "visible_box": [
+            140,
+            300,
+            48,
+            46
+          ],
+          "amodal_box": [
+            135,
+            295,
+            58,
+            56
+          ],
+          "occlusion": 0.51
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "rgb_path": "rgb_00024.png",
+      "depth_path": "depth_00024.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 25,
+          "visible_box": [
+            278,
+            183,
+            71,
+            95
+          ],
+          "amodal_box": [
+            273,
+            178,
+            81,
+            105
+          ],
+          "occlusion": 0.55
+        },
+        {
+          "label": 28,
+          "visible_box": [
+            186,
+            102,
+            86,
+            111
+          ],
+          "amodal_box": [
+            181,
+            97,
+            96,
+            121
+          ],
+          "occlusion": 0.34
+        },
+        {
+          "label": 8,
+          "visible_box": [
+            80,
+            43,
+            51,
+            99
+          ],
+          "amodal_box": [
+            75,
+            38,
+            61,
+            109
+          ],
+          "occlusion": 0.05
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "id": 25,
+      "rgb_path": "rgb_00025.png",
+      "depth_path": "depth_00025.npy",
+      "scene_type": "living_room",
+      "objects": [
+        {
+          "label": 11,
+          "visible_box": [
+            265,
+            373,
+            97,
+            50
+          ],
+          "amodal_box": [
+            260,
+            368,
+            107,
+            60
+          ],
+          "occlusion": 0.48
+        },
+        {
+          "label": 34,
+          "visible_box": [
+            482,
+            2,
+            49,
+            65
+          ],
+          "amodal_box": [
+            477,
+            0,
+            59,
+            75
+          ],
+          "occlusion": 0.48
+        },
+        {
+          "label": 36,
+          "visible_box": [
+            472,
+            307,
+            116,
+            96
+          ],
+          "amodal_box": [
+            467,
+            302,
+            126,
+            106
+          ],
+          "occlusion": 0.64
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "rgb_path": "rgb_00026.png",
+      "depth_path": "depth_00026.npy",
+      "scene_type": "bedroom",
+      "objects": [
+        {
+          "label": 1,
+          "visible_box": [
+            531,
+            18,
+            96,
+            64
+          ],
+          "amodal_box": [
+            526,
+            13,
+            106,
+            74
+          ],
+          "occlusion": 0.23
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "rgb_path": "rgb_00027.png",
+      "depth_path": "depth_00027.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 0,
+          "visible_box": [
+            521,
+            150,
+            91,
+            113
+          ],
+          "amodal_box": [
+            516,
+            145,
+            101,
+            123
+          ],
+          "occlusion": 0.51
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "rgb_path": "rgb_00028.png",
+      "depth_path": "depth_00028.npy",
+      "scene_type": "office",
+      "objects": [
+        {
+          "label": 6,
+          "visible_box": [
+            365,
+            75,
+            101,
+            104
+          ],
+          "amodal_box": [
+            360,
+            70,
+            111,
+            114
+          ],
+          "occlusion": 0.24
+        },
+        {
+          "label": 8,
+          "visible_box": [
+            234,
+            202,
+            116,
+            55
+          ],
+          "amodal_box": [
+            229,
+            197,
+            126,
+            65
+          ],
+          "occlusion": 0.45
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "rgb_path": "rgb_00029.png",
+      "depth_path": "depth_00029.npy",
+      "scene_type": "bathroom",
+      "objects": [
+        {
+          "label": 7,
+          "visible_box": [
+            123,
+            179,
+            41,
+            56
+          ],
+          "amodal_box": [
+            118,
+            174,
+            51,
+            66
+          ],
+          "occlusion": 0.43
+        },
+        {
+          "label": 33,
+          "visible_box": [
+            57,
+            314,
+            67,
+            59
+          ],
+          "amodal_box": [
+            52,
+            309,
+            77,
+            69
+          ],
+          "occlusion": 0.46
+        },
+        {
+          "label": 16,
+          "visible_box": [
+            350,
+            157,
+            59,
+            52
+          ],
+          "amodal_box": [
+            345,
+            152,
+            69,
+            62
+          ],
+          "occlusion": 0.6
+        }
+      ]
+    }
+  ]
+}
