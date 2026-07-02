@@ -1,0 +1,32 @@
+experiment_name: sceneforge_ablation
+run_name: rgb_only_baseline
+
+data:
+  nyu_dir: data/raw/nyu_depth_v2
+  sun_dir: data/raw/sun_rgbd
+  img_size: 224
+  num_workers: 4
+  occlusion_threshold: 0.2
+
+model:
+  num_classes: 40
+  num_queries: 100
+  d_model: 256
+  num_heads: 8
+  num_decoder_layers: 6
+  pretrained_encoders: true
+
+training:
+  epochs: 50
+  batch_size: 8
+  lr: 0.0001
+  weight_decay: 0.0001
+  warmup_steps: 500
+  grad_clip: 0.1
+  checkpoint_dir: checkpoints/ablation_rgb_only
+  eval_every: 5
+  save_every: 10
+  stage1_end_epoch: 5
+  stage2_end_epoch: 15
+
+use_wandb: false
