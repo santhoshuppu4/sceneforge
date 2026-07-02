@@ -69,13 +69,18 @@ def generate_synthetic_annotations(
             for _ in range(n_objects):
                 x = random.randint(0, W - 100)
                 y = random.randint(0, H - 100)
-                w = random.randint(40, 120)
-                h = random.randint(40, 120)
+                w = random.randint(40, min(120, W - x))
+                h = random.randint(40, min(120, H - y))
+                # Clamp amodal box strictly inside image boundaries
+                ax = max(0, x - 5)
+                ay = max(0, y - 5)
+                aw = min(w + 10, W - ax)
+                ah = min(h + 10, H - ay)
                 occ = round(random.uniform(0.0, 0.8), 2)
                 objects.append({
                     "label":       random.randint(0, num_classes - 1),
                     "visible_box": [x, y, w, h],
-                    "amodal_box":  [max(0, x - 5), max(0, y - 5), w + 10, h + 10],
+                    "amodal_box":  [ax, ay, aw, ah],
                     "occlusion":   occ,
                 })
 
